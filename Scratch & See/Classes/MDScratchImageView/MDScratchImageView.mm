@@ -284,7 +284,7 @@ inline CGPoint scalePoint(CGPoint point, CGSize previousSize, CGSize currentSize
 	
 	// iterate on points between begin and end
 	CGPoint i = begin;
-	while(i.x <= end.x && i.y <= end.y){
+	while(i.x > 0 && i.y > 0 && i.x <= end.x && i.y <= end.y){
 		(*fillTileFunc)(self,@selector(fillTileWithPoint:),i);
 		i.x += incrementerForx;
 		i.y += incrementerFory;
